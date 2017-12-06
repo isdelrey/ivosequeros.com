@@ -14,7 +14,7 @@ gulp.task('css', function(){
   gulp.src('./input/sass/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./output/css'))
     .pipe(tap(function(file, t) {
       console.log("css: " + path.basename(file.path));
     }));
@@ -23,7 +23,7 @@ gulp.task('css', function(){
 gulp.task('img', function(){
   gulp.src('./input/img/*')
     .pipe(webp())
-    .pipe(gulp.dest('./img'))
+    .pipe(gulp.dest('./output/img'))
     .pipe(tap(function(file, t) {
       console.log("img: " + path.basename(file.path));
     }));
@@ -37,17 +37,17 @@ gulp.task('jade', function() {
     .pipe(tap(function(file, t) {
       console.log("jade: " + path.basename(file.path));
     }))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./output/'));
 
 });
 gulp.task('js', function() {
   gulp.src('./input/js/*.js')
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./output/js'));
 
 });
 gulp.task('webserver', function() {
   sleep.sleep(5);
-  gulp.src('.')
+  gulp.src('./output/')
     .pipe(webserver({
       livereload: false,
       directoryListing: false,
@@ -57,7 +57,6 @@ gulp.task('webserver', function() {
       host: '0.0.0.0'
     }));
 });
-
 gulp.task('default', [ 'css', 'js', 'jade', 'webserver', 'img' ]);
 gulp.watch('./input/sass/*.sass', ['css']);
 gulp.watch('./input/img/*', ['img']);
