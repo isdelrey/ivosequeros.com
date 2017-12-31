@@ -25,17 +25,16 @@ body
 header
 	padding: 25px 20px 8px 20px
 	top: 0
-	border-bottom: thin solid #f0f0f0
 	width: 100%
 
 main
-	margin: 110px 0 0 0
+	margin: 0 0 0 0
 	padding: 0 20px
 
 
 @media only screen and (min-width: 1200px)
 	main
-		padding: 20px 50px
+		padding: 0 50px
 	header
 		width: calc(100% - 100px)
 		padding: 45px 0 10px 0
@@ -173,12 +172,16 @@ header h1
 	float: left
 	font-size: 18px
 	margin-top: 0
-	font-weight: 300
+
+header h1 a
+	font-weight: bolder
+	letter-spacing: -0.3px
 
 header h1 span
 	display: block
 	color: #999999
 	font-size: 11px
+	font-weight: 300
 
 header nav
 	position: relative
@@ -248,14 +251,15 @@ header nav
 	margin-top: 30px
 
 main h1
-	font-weight: bold
-	font-size: 21px
+	font-weight: bolder
+	font-size: 25px
+	padding-bottom: 30px
 	margin: 0
 
 
 @media only screen and (min-width: 1200px)
 	main h1
-		font-size: 50px
+		font-size: 70px
 		
 @media only screen and (min-width: 768px) and (max-width: 1200px)
 	main h1

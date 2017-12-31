@@ -22,7 +22,6 @@ gulp.task('css', function(){
 
 gulp.task('img', function(){
   gulp.src('./input/img/*')
-    .pipe(webp())
     .pipe(gulp.dest('./output/img'))
     .pipe(tap(function(file, t) {
       console.log("img: " + path.basename(file.path));
