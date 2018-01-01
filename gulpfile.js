@@ -20,14 +20,6 @@ gulp.task('css', function(){
     }));
 });
 
-gulp.task('img', function(){
-  gulp.src('./input/img/*')
-    .pipe(gulp.dest('./output/img'))
-    .pipe(tap(function(file, t) {
-      console.log("img: " + path.basename(file.path));
-    }));
-});
-
 gulp.task('jade', function() {
   gulp.src('./input/pages/*.jade')
     .pipe(jade({
@@ -56,9 +48,8 @@ gulp.task('webserver', function() {
       host: '0.0.0.0'
     }));
 });
-gulp.task('default', [ 'css', 'js', 'jade', 'webserver', 'img' ]);
+gulp.task('default', [ 'css', 'js', 'jade', 'webserver' ]);
 gulp.watch('./input/sass/*.sass', ['css']);
-gulp.watch('./input/img/*', ['img']);
 gulp.watch('./input/pages/*.jade', ['jade']);
 gulp.watch('./input/layouts/*.jade', ['jade']);
 gulp.watch('./input/js/*.js', ['js']);

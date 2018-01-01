@@ -2,11 +2,18 @@ extends ../layouts/light
 block head
 	link(rel='stylesheet' href='css/index.css')
 block main
-	.extra-big-fullwidth.extra-height.mono My name is Ivo_
-		p.thin.compressed._margin02top0bottom  I'm a 
+	.extra-big-fullwidth.extra-height
+			span.bold My name is Ivo
+	.extra-big-fullwidth.extra-height
+			span I'm a 
 			span full-stack developer
 			span  & 
-		p._margin0top05bottom.thin computer science student based in Barcelona
-	.std.mono.grey I spend most of my time coding, designing websites & typefaces, studying and learning languages
+	.extra-big-fullwidth.extra-height
+			span computer science student based in Barcelona
+	.std.mono.grey._description I spend most of my time coding, designing websites & typefaces, studying and learning languages
+	.icons
+		a(href="https://github.com/ivosequeros",target="_blank").icon-github
+		a(href="https://www.linkedin.com/in/ivo-sequeros-del-rey-393598131",target="_blank").icon-linkedin
+		a(href="mailto:ivosequeros@me.com").icon-mail
 	._avatar
 		img(src="img/avatar.png")
