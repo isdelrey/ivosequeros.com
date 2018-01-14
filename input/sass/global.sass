@@ -60,7 +60,7 @@ main
 	body
 		margin: 130px 3px 0 0
 		
-@media only screen and (min-width: 768px) and (max-width: 1200px)
+@media only screen and (min-width: 768px)
 	main
 		padding: 20px 50px
 	header
@@ -79,7 +79,11 @@ main
 /* General Classes */
 
 .extra-big-fullwidth
-	font-size: 3.45vw
+	font-size: 6vw
+
+@media only screen and (min-width: 768px)
+	.extra-big-fullwidth
+		font-size: 3.45vw
 
 .extra-big
 	font-size: 55px
@@ -186,6 +190,9 @@ header
 	position: fixed
 	background-color: rgba(255,255,255, 0.95)
 
+header .row
+	position: relative
+
 header h1
 	float: left
 	font-size: 18px
@@ -210,17 +217,7 @@ header nav
 	width: 50%
 
 header nav li
-	margin-right: 25px
 	color: #000
-
-header nav > ul
-	float: right
-
-header nav:hover li
-	color: #888
-
-header nav li:hover
-	color: #000 !important
 
 header nav ul
 	padding: 0
@@ -228,48 +225,94 @@ header nav ul
 
 header nav li
 	list-style: none
-	float: left
-	font-size: 17px
+	font-size: 24px
 	cursor: pointer
 
-header nav li li
-	font-size: 16px
-
-header nav li ul
-	display: none
+/* Nav Adaptation for Mobile: */
+header.open
+	height: 100vh
+	overflow-y: scroll
+	padding-bottom: 30px
+header .toggle
+	font-size: 30px
+	cursor: pointer
 	position: absolute
-	top: 18px
+	top: -2px
 	right: 0
-	padding-top: 11px
-	opacity: 0
-
-header nav li:hover ul
-	opacity: 1
-	display: block
-
 header nav
+	margin-top: 10px
 	display: none
+header.open nav
+	display: block
+header nav > ul > li
+	margin: 5px 0
+header nav ul ul
+	margin: 10px 0
+header nav li li
+	font-size: 17px
+	padding: 10px 0
+header nav li li
+	color: #666
 
 @media only screen and (min-width: 1200px)
 	header nav
 		display: block
+		margin-top: 0
 	header h1
 		font-size: 25px
 	header h1 span
 		font-size: 12px
-
-@media only screen and (min-width: 768px) and (max-width: 1200px)
-	header nav
+	/* Nav Adaptation for Desktop: */
+	header
+		height: auto
+	.toggle
+		display: none
+	header nav li
+		float: left
+		margin-right: 25px
+	header nav li:last-child
+		margin-right: 0
+	header nav > ul
+		float: right
+	header nav > ul > li
+		margin: 0 15px 0 0
+	header nav ul ul
+		margin: 0 0
+	header nav li ul
+		display: none
+		position: absolute
+		top: 18px
+		right: 0
+		padding-top: 11px
+		opacity: 0
+	header nav li
+		font-size: 17px
+	header nav li li
+		font-size: 16px
+		padding: 0 0
+		float: left
+	header nav li:hover ul
+		opacity: 1
 		display: block
+	header nav:hover li
+		color: #888
+	header nav li:hover
+		color: #000 !important
+
+
+@media only screen and (min-width: 768px)
 	header h1
 		font-size: 25px
 	header h1 span
 		font-size: 13px
+	header .toggle
+		font-size: 30px
+		top: 0px
 
 /* Main */
 
-.content
-	margin-top: 30px
+main
+	margin-top: 105px
 
 main h1
 	font-weight: bolder
@@ -277,15 +320,15 @@ main h1
 	padding-bottom: 30px
 	margin: 0
 
+		
+@media only screen and (min-width: 768px)
+	main h1
+		font-size: 40px
 
 @media only screen and (min-width: 1200px)
 	main h1
 		font-size: 70px
 		
-@media only screen and (min-width: 768px) and (max-width: 1200px)
-	main h1
-		font-size: 40px
-
 main h2
 	font-weight: normal
 	margin-top: 0

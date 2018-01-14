@@ -1,26 +1,9 @@
 /* Page */
 ._avatar img
 	width: 200px
-._introduction
-	padding-top: 0
-	text-align: center
-	margin-top: 28vh
 
-main .extra-big-fullwidth.extra-height.mono
-		font-size: 5.90vw
-
-main .std.mono.grey
-	font-size: 3vw
-	
-@media only screen and (min-width: 1200px)
-	main .extra-big-fullwidth.extra-height.mono
-		font-size: 75px
-	main .std.mono.grey
-		font-size: 18px
-	._avatar img
-		width: 280px
-	main
-		padding-top: 0
+._description
+	font-size: 3.5vw
 
 ._avatar
 	position: absolute
@@ -30,20 +13,37 @@ main .std.mono.grey
 ._description
 	margin-top: 30px
 
+._introduction
+	padding-top: 0
+	margin-top: 115px
+
 .icons
 	font-size: 40px
 	margin-top: 20px
 	color: #999
+
 .icons > *:hover
 	color: #111
+
 .icons > *:not(:last-of-type)
 	margin-right: 20px
-@media only screen and (min-width: 768px) and (max-width: 1200px)
-	main .extra-big-fullwidth.extra-height.mono
-		font-size: 7vw
+		
+
+@media only screen and (min-width: 768px)
+	._hi
+		margin-top: 12.5vh
 	._avatar img
 		width: 280px
-	main .std.mono.grey
+	._description
 		font-size: 1.2vw
-	main
-		padding-top: 30px
+	._introduction
+		text-align: center
+
+@media only screen and (min-width: 1200px)
+	._hi
+		margin-top: 12.5vh
+	._description
+		font-size: 18px
+	._avatar img
+		width: 280px
+	
