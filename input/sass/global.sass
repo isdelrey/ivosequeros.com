@@ -46,8 +46,18 @@ header
 	width: 100%
 
 main
-	margin: 0 0 0 0
+	margin: 90px 0 0 0
 	padding: 0 20px
+	
+@media only screen and (min-width: 768px)
+	main
+		padding: 0 50px
+	header
+		width: calc(100% - 100px)
+		padding: 45px 0 10px 0
+		margin: 0 50px 0 50px
+	body
+		margin: 115px 3px 0 0
 
 
 @media only screen and (min-width: 1200px)
@@ -59,16 +69,8 @@ main
 		margin: 0 50px 0 50px
 	body
 		margin: 130px 3px 0 0
-		
-@media only screen and (min-width: 768px)
-	main
-		padding: 20px 50px
-	header
-		width: calc(100% - 100px)
-		padding: 45px 0 10px 0
-		margin: 0 50px 0 50px
-	body
-		margin: 145px 3px 0 0
+	.content
+		margin-top: 0
 
 
 .turbolinks-progress-bar
@@ -189,6 +191,8 @@ main
 header
 	position: fixed
 	background-color: rgba(255,255,255, 0.95)
+	user-select: none
+	-webkit-user-select: none
 
 header .row
 	position: relative
@@ -239,12 +243,14 @@ header .toggle
 	position: absolute
 	top: -2px
 	right: 0
-	outline: none
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
 header .toggle:active
-	color: #555
+	color: #a0a0a0
 header nav
 	margin-top: 10px
 	display: none
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	animation: 
 header.open nav
 	display: block
 header nav > ul > li
@@ -256,7 +262,8 @@ header nav li li
 	padding: 7px 0
 header nav li li
 	color: #666
-
+header nav li li:active
+	color: #000
 @media only screen and (min-width: 1200px)
 	header nav
 		display: block
@@ -314,19 +321,16 @@ header nav li li
 
 /* Main */
 
-main
-	margin-top: 105px
-
 main h1
 	font-weight: bolder
-	font-size: 25px
+	font-size: 35px
 	padding-bottom: 30px
 	margin: 0
 
 		
 @media only screen and (min-width: 768px)
 	main h1
-		font-size: 40px
+		font-size: 60px
 
 @media only screen and (min-width: 1200px)
 	main h1
