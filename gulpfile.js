@@ -12,6 +12,9 @@ var cleancss = require('gulp-clean-css');
 gulp.task('css', function(){
   gulp.src(['./in/sass/*.scss',"./in/static/css/*"]).pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
+    .pipe(autoprefixer())
+    .pipe(minify())
+    .pipe(cleancss())
     .pipe(gulp.dest('./out/static/css'))
     .pipe(tap(function(file, t) {
       console.log("+ css");
