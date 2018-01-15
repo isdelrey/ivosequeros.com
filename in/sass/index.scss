@@ -1,0 +1,98 @@
+/* Index */
+.-index ._avatar img {
+  width: 200px;
+}
+
+.-index ._description {
+  font-size: 3.4vw;
+}
+
+.-index ._avatar {
+  position: absolute;
+  right: 0;
+  bottom: 10vh;
+}
+
+.-index ._hi {
+  margin-top: 22vh;
+}
+
+.-index ._introduction {
+  padding-top: 0;
+  margin-top: 115px;
+}
+
+.-index .icons {
+  font-size: 40px;
+  margin-top: 20px;
+  color: #999;
+}
+
+.-index .icons > *:hover {
+  color: #111;
+}
+
+.-index .icons > *:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* Size Adaptation */
+.-index ._name {
+  font-size: 10.5vw;
+  margin-bottom: 5px;
+}
+
+.-index ._what {
+  font-size: 5vw;
+}
+
+.-index ._description {
+  font-size: 4vw;
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .-index ._hi {
+    margin-top: 30.5vh;
+  }
+
+  .-index ._avatar img {
+    width: 280px;
+  }
+
+  .-index ._introduction {
+    text-align: center;
+  }
+
+  /* Size Adaptation */
+  .-index ._name {
+    font-size: 6.45vw;
+  }
+
+  .-index ._what {
+    font-size: 2.58vw;
+  }
+
+  .-index ._description {
+    font-size: 1.88vw;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .-index ._avatar img {
+    width: 280px;
+  }
+
+  /* Size Adaptation */
+  .-index ._name {
+    font-size: 5.45vw;
+  }
+
+  .-index ._what {
+    font-size: 2.08vw;
+  }
+
+  .-index ._description {
+    font-size: 1.58vw;
+  }
+}

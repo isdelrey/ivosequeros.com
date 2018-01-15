@@ -1,0 +1,53 @@
+extends ../layouts/light
+block head
+	title Fancy Stuff
+block main
+	main.-fancystuff
+		h1.extra-height Fancy Stuff
+		.content
+			.row
+				.col-lg-3.col-md-6.col-sm-6.col-xs-12
+					h2.std #[.bold Music] My Playlist
+					iframe._spotify_block._myplaylist(src='https://open.spotify.com/embed?uri=spotify:user:ivosequerosdelrey%21:playlist:79TRpUeJw3JClteN4HvM4k', title="My Playlist", width='400', height='580', frameborder='0', allowtransparency='true')
+				.col-lg-3.col-md-6.col-sm-6.col-xs-12
+					h2.std #[.bold Music]  My Absolute Favourites
+					iframe._spotify_block(src='https://open.spotify.com/embed?uri=spotify:track:1QmhkjuUlosROqKk59sBSK', title="Opening", width='300', height='80', frameborder='0', allowtransparency='true')
+					iframe._spotify_block(src='https://open.spotify.com/embed?uri=spotify:track:6jZeLeg4rrAnkRqt0zBtcE', title="Ma solitude", width='300', height='80', frameborder='0', allowtransparency='true')
+					iframe._spotify_block(src='https://open.spotify.com/embed?uri=spotify:track:7fRJy1tYCTSCw0uITFbDA2', title="Grand Union", width='300', height='80', frameborder='0', allowtransparency='true')
+					iframe._spotify_block(src='https://open.spotify.com/embed?uri=spotify:track:5CHVLIj3iRl2vAh1INEw0H', title="On ne change pas", width='300', height='80', frameborder='0', allowtransparency='true')
+					iframe._spotify_block(src='https://open.spotify.com/embed?uri=spotify:track:7sqii6BhIDpJChYpU3WjwS', title="Kiara", width='300', height='80', frameborder='0', allowtransparency='true')
+
+				.col-lg-3.col-md-6.col-sm-6.col-xs-12
+					h2.std #[.bold Typefaces]  My Absolute Favourites
+					._item_block
+						.img
+							img(src="static/img/futura.png", alt="Futura Letter" height="50")
+						.title
+							span Futura
+					._item_block
+						.img
+							img(src="static/img/baskervilleitalic.png", alt="Baskerville Italic Letter", height="50")
+						.title
+							span Baskerville Italic
+					._item_block
+						.img
+							img(src="static/img/garamond.png", alt="Adobe Garamond Letter" height="50")
+						.title
+							span Adobe Garamond
+					._item_block
+						.img
+							img(src="static/img/sanfrancisco.png", alt="San Franscisco Letter", height="50")
+						.title
+							span San Francisco
+				.col-lg-3.col-md-6.col-sm-6.col-xs-12
+					h2.std #[.bold Typefaces]  My Favourite Ampersands
+					._item_block
+						.img
+							img(src="static/img/ampersand-garamond.png", alt="Garamond Italic Ampersand", height="50")
+						.title
+							span Garamond Italic
+					._item_block
+						.img
+							img(src="static/img/ampersand-hoefler.png", alt="Hoefler Text Italic Ampersand", height="50")
+						.title
+							span Hoefler Italic

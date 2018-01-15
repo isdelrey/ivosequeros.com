@@ -1,0 +1,67 @@
+/* Fancy Stuff */
+@media only screen and (min-width: 1200px) {
+  .-fancystuff *[class^='col-']:not(:last-of-type) {
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .-fancystuff *[class^='col-']:not(:nth-child(2n)) {
+    padding-right: 30px;
+  }
+}
+.-fancystuff *[class^='col-'] {
+  margin-bottom: 50px;
+}
+
+.-fancystuff ._spotify_block {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.-fancystuff ._item_block {
+  border: thin #e0e0e0 solid;
+  margin: 21px 0 0 0;
+  height: 80px;
+}
+
+.-fancystuff ._item_block:first-of-type {
+  margin: 27px 0 0 0;
+}
+
+.-fancystuff ._item_block .img {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.-fancystuff ._item_block .img img {
+  height: 42px;
+}
+
+.-fancystuff ._item_block .title {
+  height: 100%;
+  width: 75%;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.-fancystuff ._myplaylist {
+  height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .-fancystuff ._myplaylist {
+    height: 480px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .-fancystuff ._myplaylist {
+    height: 60vh;
+  }
+}

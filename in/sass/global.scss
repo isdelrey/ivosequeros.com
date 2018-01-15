@@ -1,0 +1,454 @@
+/* Global */
+@charset "UTF-8";
+/* Icons */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/fontello.eot?5050897");
+  src: url("../fonts/fontello.eot?5050897#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?5050897") format("woff2"), url("../fonts/fontello.woff?5050897") format("woff"), url("../fonts/fontello.ttf?5050897") format("truetype"), url("../font/fontello.svg?5050897#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"] {
+  font-family: "icons";
+}
+
+.icon-github:before {
+  content: "";
+}
+
+.icon-mail:before {
+  content: "";
+}
+
+.icon-linkedin:before {
+  content: "";
+}
+
+.icon-mail {
+  font-size: 85%;
+}
+
+/* ------ General ------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "acumin-pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background-color: #fff;
+  color: #000;
+}
+
+/* General Width Adjustment */
+header {
+  padding: 25px 20px 8px 20px;
+  top: 0;
+  width: 100%;
+}
+
+main {
+  margin: 90px 0 0 0;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 0 50px;
+  }
+
+  header {
+    width: calc(100% - 100px);
+    padding: 45px 0 10px 0;
+    margin: 0 50px 0 50px;
+  }
+
+  body {
+    margin: 115px 3px 0 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 0 50px;
+  }
+
+  header {
+    width: calc(100% - 100px);
+    padding: 45px 0 10px 0;
+    margin: 0 50px 0 50px;
+  }
+
+  body {
+    margin: 130px 3px 0 0;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
+.turbolinks-progress-bar {
+  height: 4px;
+  background-color: #111;
+}
+
+/* General Classes */
+.extra-big-fullwidth {
+  font-size: 7.4vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .extra-big-fullwidth {
+    font-size: 3.45vw;
+  }
+}
+.extra-big {
+  font-size: 55px;
+}
+
+.extra-big-emoji {
+  font-size: 47px;
+}
+
+.big {
+  font-size: 40px;
+}
+
+.medium {
+  font-size: 30px;
+}
+
+.std-emoji {
+  font-size: 37px;
+}
+
+.std {
+  font-size: 16px;
+}
+
+.std-emoji {
+  font-size: 15px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.grey {
+  color: #999;
+}
+
+.lightgrey {
+  color: #e0e0e0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.blue {
+  color: #00effc;
+}
+
+.button {
+  text-transform: uppercase;
+  border: thin solid #e0e0e0;
+  letter-spacing: 2px;
+  color: #999;
+  font-size: 13px;
+  padding: 8px;
+  margin: 5px;
+  float: left;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  cursor: button;
+}
+
+.button:hover, .button.clicked {
+  border: thin solid black;
+  color: white;
+  background-color: black;
+}
+
+.extra-height {
+  line-height: 1.3em;
+}
+
+.mono {
+  font-family: "roboto-mono";
+}
+
+.compressed {
+  letter-spacing: -1.5px;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.asblock {
+  display: block;
+}
+
+.content > .pagedescription {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .std {
+    font-size: 20px;
+  }
+
+  .content > .pagedescription {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .std {
+    font-size: 18px;
+  }
+
+  .content > .pagedescription {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+/* ---- Page structure ----- */
+/* Header */
+header {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+header .row {
+  position: relative;
+}
+
+header h1 {
+  float: left;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+header h1 a {
+  font-weight: bolder;
+  letter-spacing: -0.3px;
+}
+
+header h1 span {
+  display: block;
+  color: #111;
+  font-family: "roboto-mono";
+  font-size: 13px;
+  font-weight: normal;
+}
+
+header nav {
+  position: relative;
+  float: right;
+  font-size: 18px;
+  margin-top: 4px;
+  width: 50%;
+}
+
+header nav li {
+  color: #000;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  list-style: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Nav Adaptation for Mobile: */
+header.open {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+}
+
+header .toggle {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header .toggle:active {
+  color: #a0a0a0;
+}
+
+header nav {
+  margin-top: 10px;
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header.open nav {
+  display: block;
+}
+
+header nav > ul > li {
+  margin: 5px 0;
+}
+
+header nav ul ul {
+  margin: 10px 0;
+}
+
+header nav li li {
+  font-size: 17px;
+  padding: 7px 0;
+}
+
+header nav li li {
+  color: #666;
+}
+
+header nav li li:active {
+  color: #000;
+}
+
+@media only screen and (min-width: 1200px) {
+  header nav {
+    display: block;
+    margin-top: 0;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  header h1 span {
+    font-size: 12px;
+  }
+
+  /* Nav Adaptation for Desktop: */
+  header {
+    height: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  header nav li {
+    float: left;
+    margin-right: 25px;
+  }
+
+  header nav li:last-child {
+    margin-right: 0;
+  }
+
+  header nav > ul {
+    float: right;
+  }
+
+  header nav > ul > li {
+    margin: 0 15px 0 0;
+  }
+
+  header nav ul ul {
+    margin: 0 0;
+  }
+
+  header nav li ul {
+    display: none;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    padding-top: 11px;
+    opacity: 0;
+  }
+
+  header nav li {
+    font-size: 17px;
+  }
+
+  header nav li li {
+    font-size: 16px;
+    padding: 0 0;
+    float: left;
+  }
+
+  header nav li:hover ul {
+    opacity: 1;
+    display: block;
+  }
+
+  header nav:hover li {
+    color: #888;
+  }
+
+  header nav li:hover {
+    color: #000 !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  header h1 span {
+    font-size: 13px;
+  }
+
+  header .toggle {
+    font-size: 30px;
+    top: 0px;
+  }
+}
+/* Main */
+main h1 {
+  font-weight: bolder;
+  font-size: 35px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  main h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main h1 {
+    font-size: 70px;
+  }
+}
+main h2 {
+  font-weight: normal;
+}

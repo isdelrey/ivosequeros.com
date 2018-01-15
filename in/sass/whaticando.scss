@@ -1,0 +1,20 @@
+/* What I can do */
+@media only screen and (min-width: 768px) {
+  main.-whaticando *[class^='col-']:first-of-type {
+    padding-right: 5vw;
+  }
+}
+.-whaticando ._margin-top-40 {
+  margin-top: 40px;
+}
+
+main.-whaticando *[class^='col-'] > p {
+  margin-top: 40px;
+}
+
+.-whaticando .profilepic {
+  float: left;
+  font-size: 40px;
+  margin-right: 12px;
+  margin-left: -5px;
+}
