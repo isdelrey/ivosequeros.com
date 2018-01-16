@@ -1,9 +1,6 @@
 /* Coding Style */
 .-codingstyle ._sq_nonresize_block {
-  border: thin #e0e0e0 solid;
-  margin: 21px 0 0 0;
-  padding: 25px 30px 30px 30px;
-  width: 350px;
+  margin: 20px 0;
 }
 
 .-codingstyle ._sq_nonresize_block ._lang {
@@ -29,5 +26,11 @@
 @media only screen and (min-width: 768px) {
   main.-codingstyle ._sq_nonresize_block {
     margin-right: 30px;
+  }
+  .-codingstyle ._sq_nonresize_block {
+    border: thin #e0e0e0 solid;
+    margin: 21px 0 0 0;
+    padding: 25px 30px 30px 30px;
+    width: 350px;
   }
 }
